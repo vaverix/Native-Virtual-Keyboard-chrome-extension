@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Native Virtual Keyboard with touch support for mobile/IoT/RaspberryPi devices",
+  "description": "Native on-screen keyboard for touch screen devices. What differs it from any other keyboard on WebStore? Well, it sends native javascript events on every keystroke, so it works on any website, with any framework like React, Angular, Vue etc. (works on Spotify website too!)",
+  "version": "1.0",
+  "permissions": [
+    "tabs", "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "web_accessible_resources": [
+    "keyboard.html",
+    "style.css",
+    "images/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["jquery-2.2.4.min.js", "script.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "manifest_version": 2
+}

@@ -1,0 +1,104 @@
+#tk {
+  background-color: rgb(50, 50, 50);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  padding: 1vw;
+  z-index: 1000;
+}
+#tk-inputtext {
+  color: white;
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+#tk #keyboard-2,
+#tk #keyboard-3 {
+  display: none;
+}
+#tk .line {
+  clear: both;
+  position: relative;
+  z-index: 1;
+}
+#tk button {
+  float: left;
+  width: 9.4vw;
+  height: 40px;
+  line-height: 40px;
+  margin: 0.2vw;
+  padding: 0;
+  border: 1px solid #7f7f7f;
+  border-radius: 3px;
+  background-color: #4a4a4a;
+  color: #fff;
+  font-weight: normal;
+  font-size: 24px;
+  position: relative;
+  z-index: 1;
+  transition: background-color 0.15s;
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 24px;
+}
+#tk button.active {
+  background-color: #393939;
+}
+#tk button * {
+  pointer-events: none;
+}
+#tk .margin-0_5 {
+  margin-left: 5vw;
+}
+#tk .size-1_5 {
+  width: 14.2vw;
+}
+#tk .size-3 {
+  width: 29vw;
+}
+#tk .size-4 {
+  width: 38.8vw;
+}
+#tk .size-5 {
+  width: 48.6vw;
+}
+#tk .option-1 *,
+#tk .option-2 *,
+#tk .option-3 * {
+  display: none;
+  vertical-align: middle;
+}
+#tk .option-1 *:nth-child(1),
+#tk .option-2 *:nth-child(2),
+#tk .option-3 *:nth-child(3) {
+  display: inline;
+}
+#tk .tooltip {
+  background-color: #3f3f3f;
+  border: 1px solid #7f7f7f;
+  border-radius: 3px;
+  display: none;
+  position: absolute;
+  z-index: 3;
+  padding: 0.3vw;
+  bottom: -10px;
+  left: 0;
+}
+#tk #tooltip_a {
+  left: -0.5vw;
+}
+#tk #tooltip_e {
+  left: 19vw;
+}
+#tk #tooltip_i {
+  left: 68.2vw;
+}
+#tk #tooltip_o {
+  left: 68.2vw;
+}
+#tk #tooltip_u {
+  left: 58.2vw;
+}
+#tk #tooltip_c {
+  left: 29vw;
+}
