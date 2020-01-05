@@ -3,7 +3,7 @@
 
   "name": "Native Virtual On-Screen Keyboard",
   "description": "Native on-screen keyboard for touch/mobile/IoT/Raspberry Pi devices. It works on any website, including those built with React!",
-  "version": "1.0",
+  "version": "1.1",
   "permissions": [
     "tabs", "<all_urls>"
   ],

@@ -27,9 +27,9 @@
         $(this).attr("src", baseUrl + $(this).attr("src"));
       });
       $("body")
-        .on("focus", "input[type=text], input[type=password]", onFocus)
-        .on("blur", "input[type=text], input[type=password]", onBlur);
-      inputList = $("input[type=text], input[type=password]");
+        .on("focus", "input[type=text], input[type=password], input:not([type])", onFocus)
+        .on("blur", "input[type=text], input[type=password], input:not([type])", onBlur);
+      inputList = $("input[type=text], input[type=password], input:not([type])");
       keyboard.appendTo("body");
     });
   }
