@@ -1,4 +1,4 @@
-(function() {
+(function () {
   var keyboard;
   var input;
   var inputList;
@@ -13,30 +13,40 @@
     if (chrome && chrome.extension && chrome.extension.getURL) {
       baseUrl = chrome.extension.getURL("");
     }
-    $.get(baseUrl + "style.css", function(data) {
+    $.get(baseUrl + "style.css", function (data) {
       $("head").append('<style type="text/css">' + data + "</style>");
     });
-    $.get(baseUrl + "keyboard.html", function(data) {
+    $.get(baseUrl + "keyboard.html", function (data) {
       keyboard = $(data)
         .mousedown(onMouseDown)
         .mouseup(onMouseUp)
         .mousemove(onMouseMove);
       hideKeyboard();
       setKeyboard(1);
-      $("img", keyboard).each(function() {
+      $("img", keyboard).each(function () {
         $(this).attr("src", baseUrl + $(this).attr("src"));
       });
       $("body")
-        .on("focus", "input[type=text], input[type=password], input:not([type])", onFocus)
-        .on("blur", "input[type=text], input[type=password], input:not([type])", onBlur);
-      inputList = $("input[type=text], input[type=password], input:not([type])");
+        .on(
+          "focus",
+          "input[type=text], textarea, input[type=password], input:not([type])",
+          onFocus
+        )
+        .on(
+          "blur",
+          "input[type=text], textarea, input[type=password], input:not([type])",
+          onBlur
+        );
+      inputList = $(
+        "input[type=text], textarea, input[type=password], input:not([type])"
+      );
       keyboard.appendTo("body");
     });
   }
 
   function onFocus(e) {
     input = this;
-    $(input).bind("input.tr", function(e2) {
+    $(input).bind("input.tr", function (e2) {
       $("#tk-inputtext").html($(input).val());
     });
     updateEnterOption();
@@ -54,7 +64,7 @@
     keyboard.show();
     $("#booklet").css({ "padding-bottom": keyboard.outerHeight() + "px" });
     $("#booklet  #dialog_buttons").css({
-      bottom: keyboard.outerHeight() + "px"
+      bottom: keyboard.outerHeight() + "px",
     });
   }
 
@@ -157,9 +167,7 @@
       case "enter":
         var index = inputList.index(input);
         if (index == inputList.length - 1) {
-          $(input)
-            .closest("form")
-            .submit();
+          $(input).closest("form").submit();
         } else {
           inputList.eq(index + 1).focus();
         }
@@ -224,32 +232,20 @@
   }
 
   function buttonToUpperCase() {
-    $(this).html(
-      $(this)
-        .html()
-        .toUpperCase()
-    );
+    $(this).html($(this).html().toUpperCase());
   }
 
   function buttonToLowerCase() {
-    $(this).html(
-      $(this)
-        .html()
-        .toLowerCase()
-    );
+    $(this).html($(this).html().toLowerCase());
   }
 
   function updateEnterOption() {
     if (input) {
       var index = inputList.index(input);
       if (index == inputList.length - 1) {
-        $(".enter")
-          .removeClass("option-1")
-          .addClass("option-2");
+        $(".enter").removeClass("option-1").addClass("option-2");
       } else {
-        $(".enter")
-          .addClass("option-1")
-          .removeClass("option-2");
+        $(".enter").addClass("option-1").removeClass("option-2");
       }
     }
   }

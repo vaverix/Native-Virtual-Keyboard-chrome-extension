@@ -1,5 +1,5 @@
- [![GitHub stars](https://img.shields.io/github/stars/vaverix/Native-Virtual-Keyboard-chrome-extension.svg)](https://github.com/vaverix/Native-Virtual-Keyboard-chrome-extension/stargazers)
- [![GitHub license](https://img.shields.io/github/license/vaverix/Native-Virtual-Keyboard-chrome-extension.svg)](https://github.com/vaverix/Native-Virtual-Keyboard-chrome-extension/blob/master/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/vaverix/Native-Virtual-Keyboard-chrome-extension.svg)](https://github.com/vaverix/Native-Virtual-Keyboard-chrome-extension/stargazers)
+[![GitHub license](https://img.shields.io/github/license/vaverix/Native-Virtual-Keyboard-chrome-extension.svg)](https://github.com/vaverix/Native-Virtual-Keyboard-chrome-extension/blob/master/LICENSE)
 
 # Native Virtual Keyboard [chrome-extension](https://chrome.google.com/webstore/detail/native-virtual-on-screen/jnoclgeeaiidamofdlbnakfgkanggnla)
 
